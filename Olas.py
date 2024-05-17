@@ -111,6 +111,70 @@ while True:
     especies()
   elif opcion == "7":
     ####Informacion para almacenar
+     print("Capture 1 si desea guardar en un archivo la informacion de un personaje de star wars")
+     print("Capture 1 si desea guardar en un archivo la informacion de un plabeta de star wars")
+     print("Capture 1 si desea guardar en un archivo la informacion de una pelicula de star wars")
+     print("Capture 1 si desea guardar en un archivo la informacion de algunas de las naves estelares de star wars")
+     print("Capture 1 si desea guardar en un archivo la informacion de un vehiculo de star wars")
+     print("Capture 1 si desea guardar en un archivo la informacion de un especie de star wars")
+     respuesta=int(input())
+
+     if(respuesta==1):
+        personaje_url = input("Pon el url del personaje: ")
+        personaje_data=star_wars_informacion(personaje_url)
+        if personaje_data:
+           guardar_archivo(personaje_data, 'personaje.txt')
+           print("informacion guardada en personaje.txt")
+        
+        else:
+           print("respuesta invalida")
+     elif (respuesta==2):
+        planeta_url = input("Pon el url del planeta: ")
+        planeta_data=star_wars_informacion(planeta_url)
+        if planeta_data:
+            guardar_archivo(planeta_data, 'planeta.txt')
+            print("informacion guardada en personaje.txt")
+        
+        else:
+            print("respuesta invalida")
+    elif(respuesta==3):
+        pelicula_url = input("Pon el url del pelicula: ")
+        pelicula_data=star_wars_informacion(pelicula_url)
+        if pelicula_data:
+           guardar_archivo(pelicula_data, 'pelicula.txt')
+           print("informacion guardada en pelicula.txt")
+    
+        else:
+           print("respuesta invalida")
+    elif(respuesta==4):
+        nave_espacial_url = input("Pon el url de la nave espacial: ")
+        nave_espacial_data=star_wars_informacion(nave_espacial_url)
+        if nave_espacial_data:
+           guardar_archivo(nave_espacial_data, 'nave espacial.txt')
+           print("informacion guardada en nave espacial.txt")
+        
+        else:
+           print("respuesta invalida")
+    elif(respuesta==5):
+        vehiculo_url = input("Pon el url de la nave espacial: ")
+        vehiculo_data=star_wars_informacion(vehiculo_url)
+        if vehiculo_url:
+            guardar_archivo(vehiculo_data, 'vehiculo.txt')
+            print("informacion guardada en vehiculo.txt")
+        else:
+           print("respuesta invalida")
+    elif(respuesta==6):
+        especie_url = input("Pon el url de la nave espacial: ")
+        especie_data=star_wars_informacion(especie_url)
+        if especie_data:
+           guardar_archivo(especie_data, 'especie.txt')
+           print("informacion guardada en especie.txt")
+  
+        else:
+           print("respuesta invalida")
+    else:
+        print("Capture una respuestra valida")
+      
     print("ola")
   elif opcion == "8":
     print("nos vemos pronto")
